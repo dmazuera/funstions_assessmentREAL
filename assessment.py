@@ -140,7 +140,7 @@ Your function should
 
     input_berry = is_berry(fruit)
 
-    if input_berry == True
+    if input_berry == True:
         shipping_cost = 0
     else: 
         shipping_cost = 5
@@ -251,6 +251,46 @@ def calculate_price( base_price, state, tax_percentage=0.05):
 
 #        >>> outer("Balloonicorn")
 #        ('Balloonicorn', 'BalloonicornBalloonicornBalloonicorn')
+
+
+def endless_extend(lst_start, *therest):
+    """ takes in any n arguments, appends them to the list, returns list"""
+
+    list_of_arguments = list(therest)
+    lst_start.extend(list_of_arguments)
+
+    return lst_start
+
+
+
+
+def new_function(word):
+    """ takes in a word"""
+
+    def inner_function(word):
+        new_mult_word = word * 3
+        return new_mult_word
+
+
+    out_put = [word ,inner_function(word)]
+    better_output = tuple(out_put)
+
+    return better_output
+
+# weird_word = raw_input("add a word here: ")
+# new_function(weird_word)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ###############################################################################
